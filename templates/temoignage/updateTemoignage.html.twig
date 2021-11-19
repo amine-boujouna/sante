@@ -1,0 +1,30 @@
+{% extends 'event.html.twig' %}
+
+{% block title %}Hello update{% endblock %}
+
+{% block body %}
+    <section class="wrapper site-min-height">
+        <div class="container event">
+            {{ form_start(formF,{'attr':{'novalidate':'novalidate'}}) }}
+            <table id="ajout_table">
+                <tr class="ligne">
+                    <td>  {{ form_label(formF.titre) }}</td>
+                    <td>   <div class="divvve">{{ form_widget(formF.titre) }}</div></td>
+                    <td>  {{ form_errors(formF.titre)}}</div></td>
+        </tr>
+        <tr class="ligne">
+            <td>  {{ form_label(formF.temoignage) }}</td>
+            <td>  <div class="divvve"> {{ form_widget(formF.temoignage) }}</div></td>
+            <td> <div> {{ form_errors(formF.temoignage)}}</div></td>
+        </tr >
+
+
+
+
+        </table>
+
+        {{ form_end(formF) }}
+        </div>
+    </section>
+
+{% endblock %}

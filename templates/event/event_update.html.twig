@@ -1,0 +1,53 @@
+{% extends 'event.html.twig' %}
+
+{% block title %}Hello  Update{% endblock %}
+
+{% block body %}
+    <section class="wrapper site-min-height">
+        <div class="container event">
+            {{ form_start(formE,{'attr':{'novalidate':'novalidate'}}) }}
+            <table id="ajout_table">
+                <tr class="ligne">
+                    <td>  {{ form_label(formE.titre) }}</td>
+                    <td>   <div class="divvve">{{ form_widget(formE.titre) }}</div></td>
+                    <td>  {{ form_errors(formE.titre)}}</div></td>
+        </tr>
+        <tr class="ligne">
+            <td>  {{ form_label(formE.minicontenu) }}</td>
+            <td>  <div class="divvve"> {{ form_widget(formE.minicontenu) }}</div></td>
+            <td> <div> {{ form_errors(formE.minicontenu)}}</div></td>
+        </tr >
+        <tr>
+            <td>  {{ form_label(formE.maxcontenu) }}</td>
+            <td> <div class="divvve">  {{ form_widget(formE.maxcontenu) }}</div></td>
+            <td> <div> {{ form_errors(formE.maxcontenu)}}</div></td>
+        </tr>
+        <tr class="ligne">
+            <td>  {{ form_label(formE.dateevent) }}</td>
+            <td> <div class="divvve">  {{ form_widget(formE.dateevent) }}</div></td>
+            <td> <div> {{ form_errors(formE.dateevent)}}</div></td>
+        </tr>
+        <tr class="ligne">
+            <td>  {{ form_label(formE.image) }}</td>
+            <td> <div class="divvve">  {{ form_widget(formE.image) }}</div></td>
+            <td> <div> {{ form_errors(formE.image)}}</div></td>
+        </tr>
+        <tr class="ligne">
+            <td>  {{ form_label(formE.address) }}</td>
+            <td> <div class="divvve">  {{ form_widget(formE.address) }}</div></td>
+            <td> <div> {{ form_errors(formE.address)}}</div></td>
+        </tr>
+        <tr class="ligne">
+            <td>  {{ form_label(formE.phone) }}</td>
+            <td> <div class="divvve">  {{ form_widget(formE.phone) }}</div></td>
+            <td> <div> {{ form_errors(formE.phone)}}</div></td>
+        </tr>
+
+
+        </table>
+
+        {{ form_end(formE) }}
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'event.html.twig' %}
+
+{% block title %}Hello {{ controller_name}}{% endblock %}
+
+{% block body %}
+
+<section class="wrapper site-min-height">
+<div class="container event">
+<div class="row justify-content-center text-center">
+
+
+<div class="offset-sm-1 col-sm-5 clll">
+<img src="{{ asset('img/sante1.png')}}" class="img.fluid" alt="">
+    <div class="event-content">
+        <h4>sante </h4>
+        <span> lorem,fknvjnvvnjhbjkfvfvccccccccccccccccc
+					ffkfidsfk,kbsdfklsdfsbc hyfqsdfdscccccc
+					fkjfhfd duhffjfdsfsnkdksdouhccccccccccc</span><br>
+        <a href="">join</a>
+    </div>
+
+    </div>
+    <div class="offset-sm-1 col-sm-5 clll">
+        <img src="{{ asset('img/sante1.png')}}" class="img.fluid" alt="">
+        <div class="event-content">
+            <h4>sante </h4>
+            <span> lorem,fknvjnvvnjhbjkfvfvccccccccccccccccc
+					ffkfidsfk,kbsdfklsdfsbc hyfqsdfdscccccc
+					fkjfhfd duhffjfdsfsnkdksdouhccccccccccc</span><br>
+            <a href="">join</a>
+        </div>
+
+    </div>
+    <div class="offset-sm-1 col-sm-5 clll">
+        <img src="{{ asset('img/sante1.png')}}" class="img.fluid" alt="">
+        <div class="event-content">
+            <h4>sante </h4>
+            <span> lorem,fknvjnvvnjhbjkfvfvccccccccccccccccc
+					ffkfidsfk,kbsdfklsdfsbc hyfqsdfdscccccc
+					fkjfhfd duhffjfdsfsnkdksdouhccccccccccc</span><br>
+            <a href="">join</a>
+        </div>
+
+    </div>
+    <div class="offset-sm-1 col-sm-5 clll">
+        <img src="{{ asset('img/sante1.png')}}" class="img.fluid" alt="">
+        <div class="event-content">
+            <h4>sante </h4>
+            <span> lorem,fknvjnvvnjhbjkfvfvccccccccccccccccc
+					ffkfidsfk,kbsdfklsdfsbc hyfqsdfdscccccc
+					fkjfhfd duhffjfdsfsnkdksdouhccccccccccc</span><br>
+            <a href="">join</a>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    </div>
+
+    </div>
+  <!--  <input type="file" name="photo" class="ch">-->
+
+{# {{ form(formE) }} #}
+    {{ form_start(formE,{'attr':{'novalidate':'novalidate'}}) }}
+    <table>
+       <tr>
+           <td>  {{ form_label(formE.titre) }}</td>
+           <td>   {{ form_widget(formE.titre) }}</td>
+           <td>  {{ form_errors(formE.titre)}}</td>
+       </tr>
+        <tr>
+            <td>  {{ form_label(formE.minicontenu) }}</td>
+            <td>   {{ form_widget(formE.minicontenu) }}</td>
+            <td>  {{ form_errors(formE.minicontenu)}}</td>
+        </tr>
+        <tr>
+            <td>  {{ form_label(formE.maxcontenu) }}</td>
+            <td>   {{ form_widget(formE.maxcontenu) }}</td>
+            <td>  {{ form_errors(formE.maxcontenu)}}</td>
+        </tr>
+        <tr>
+            <td>  {{ form_label(formE.dateevent) }}</td>
+            <td>   {{ form_widget(formE.dateevent) }}</td>
+            <td>  {{ form_errors(formE.dateevent)}}</td>
+        </tr>
+        <tr>
+            <td>  {{ form_label(formE.image) }}</td>
+            <td>   {{ form_widget(formE.image) }}</td>
+            <td>  {{ form_errors(formE.image)}}</td>
+        </tr>
+        <tr>
+            <td>  {{ form_label(formE.address) }}</td>
+            <td>   {{ form_widget(formE.address) }}</td>
+            <td>  {{ form_errors(formE.address)}}</td>
+        </tr>
+        <tr>
+            <td>  {{ form_label(formE.phone) }}</td>
+            <td>   {{ form_widget(formE.phone) }}</td>
+            <td>  {{ form_errors(formE.phone)}}</td>
+        </tr>
+
+
+    </table>
+
+    {{ form_end(formE) }}
+
+    </section>
+
+
+{% endblock %}

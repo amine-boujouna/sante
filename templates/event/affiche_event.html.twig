@@ -1,0 +1,32 @@
+{% extends 'event.html.twig' %}
+
+{% block title %}affiche event{% endblock %}
+
+{% block body %}
+
+    <section class="wrapper site-min-height">
+        <div class="container event">
+            <a class="push_button blue" href="{{ path('event_add') }}">Ajouter un nouveau Evenement</a>
+            <div class="row justify-content-center text-center">
+
+                {% for e in ee %}
+                <div class="offset-sm-1 col-sm-5 clll">
+                    <img src="{{ asset('img/instagram.jpg')}}" class="img.fluid" alt="">
+                    <div class="event-content">
+                        <h4>{{ e.titre}} </h4>
+                        <span> {{ e.minicontenu }}</span><br>
+                        <a href=" {{ path('updateE',{'id':e.id}) }}">Update</a>
+                        <a href=" {{ path('deleteE',{'id':e.id}) }}">Delete</a>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+    </section>
+
+
+{% endblock %}

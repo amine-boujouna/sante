@@ -3,51 +3,62 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="1071.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjoutermedicamentfxmlController">
-    <stylesheets>
-        <URL value="@ajoutermedicamentfxml.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" fx:id="tabcategorie1" prefHeight="551.0" prefWidth="1071.0" style="-fx-background-color: #F8FFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjoutermedicamentfxmlController">
    <children>
-      <HBox prefHeight="49.0" prefWidth="600.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ajoutermedicament" />
-         </children>
-      </HBox>
-      <JFXTextField fx:id="tfnom1" layoutX="113.0" layoutY="65.0" />
-      <JFXTextField fx:id="tfprix" layoutX="113.0" layoutY="117.0" />
-      <JFXTextField fx:id="tfquantite" layoutX="113.0" layoutY="169.0" />
-      <JFXComboBox fx:id="tfremarquecombo" layoutX="170.0" layoutY="217.0" />
-      <JFXDatePicker fx:id="tfdate" layoutX="113.0" layoutY="278.0" />
-      <TableView fx:id="tableview" layoutX="439.0" layoutY="138.0" prefHeight="200.0" prefWidth="550.0">
+      <JFXTextField fx:id="tfnom1" layoutX="185.0" layoutY="108.0" />
+      <JFXTextField fx:id="tfprix" layoutX="185.0" layoutY="160.0" />
+      <JFXComboBox fx:id="tfremarquecombo" layoutX="229.0" layoutY="216.0" />
+      <JFXDatePicker fx:id="tfdate" layoutX="190.0" layoutY="277.0" />
+      <TableView fx:id="tableview" layoutX="454.0" layoutY="116.0" prefHeight="200.0" prefWidth="590.0">
         <columns>
-          <TableColumn fx:id="nomtab" prefWidth="75.0" text="nom" />
-          <TableColumn fx:id="prixtab" prefWidth="75.0" text="prix" />
-            <TableColumn fx:id="quantitetab" prefWidth="75.0" text="quantite" />
-            <TableColumn fx:id="remarquetab" prefWidth="75.0" text="remarque" />
-            <TableColumn fx:id="datetab" prefWidth="129.0" text="dateexpiration" />
-            <TableColumn fx:id="idtab" prefWidth="84.0" text="id" />
+          <TableColumn fx:id="nomtab" prefWidth="178.0" style="backgroung-color: blue;" text="nom" />
+          <TableColumn fx:id="prixtab" prefWidth="74.0" text="prix" />
+            <TableColumn fx:id="remarquetab" prefWidth="82.0" text="remarque" />
+            <TableColumn fx:id="datetab" prefWidth="116.0" text="dateexpiration" />
+            <TableColumn fx:id="tabtacategorie1" prefWidth="98.0" text="categorie" />
+            <TableColumn fx:id="tabid" minWidth="2.0" prefWidth="41.0" text="id" />
         </columns>
       </TableView>
-      <Label layoutX="27.0" layoutY="81.0" text="nom" />
-      <Label layoutX="30.0" layoutY="122.0" text="prix" />
-      <Label layoutX="30.0" layoutY="185.0" text="quantite" />
-      <Label layoutX="40.0" layoutY="238.0" text="remarque" />
-      <Label fx:id="tfnom" layoutX="7.0" layoutY="299.0" text="dateexpiration" />
-      <JFXTextField fx:id="tfmodifer" layoutX="239.0" layoutY="484.0" />
-      <JFXTextField fx:id="tfsupprimer" layoutX="442.0" layoutY="484.0" />
-      <Button fx:id="btnajouter1" layoutX="151.0" layoutY="453.0" mnemonicParsing="false" onAction="#buttonajouter1" text="ajouter" />
-      <Button fx:id="btnmodifer" layoutX="280.0" layoutY="453.0" mnemonicParsing="false" onAction="#buttonmodifer1" text="modifier" />
-      <Button fx:id="btnsupprimer" layoutX="485.0" layoutY="453.0" mnemonicParsing="false" onAction="#buttonsupprimer1" text="supprimer" />
-      <Button fx:id="btnrechercher" layoutX="714.0" layoutY="447.0" mnemonicParsing="false" onAction="#buttonrechercher1" text="rechercher" />
-      <JFXTextField fx:id="tfchercher" layoutX="675.0" layoutY="484.0" />
+      <Label layoutX="15.0" layoutY="110.0" text="nom" textFill="#06043be5">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font></Label>
+      <Label layoutX="17.0" layoutY="162.0" text="prix" textFill="#06043be6">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font></Label>
+      <Label layoutX="11.0" layoutY="218.0" text="remarque" textFill="#06043be6">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font></Label>
+      <Label fx:id="tfnom" layoutX="8.0" layoutY="279.0" text="dateexpiration" textFill="#06043be6">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font></Label>
+      <Button fx:id="btnajouter1" layoutX="80.0" layoutY="437.0" mnemonicParsing="false" onAction="#buttonajouter1" prefHeight="51.0" prefWidth="144.0" styleClass="d" stylesheets="@../css/button.css" text="ajouter" />
+      <Button fx:id="btnmodifer" layoutX="293.0" layoutY="437.0" mnemonicParsing="false" onAction="#buttonmodifer1" prefHeight="51.0" prefWidth="134.0" styleClass="d" stylesheets="@../css/button.css" text="modifier" />
+      <Button fx:id="btnsupprimer" layoutX="499.0" layoutY="437.0" mnemonicParsing="false" onAction="#buttonsupprimer1" prefHeight="51.0" prefWidth="154.0" styleClass="d" stylesheets="@../css/button.css" text="supprimer" />
+      <Button fx:id="btnrechercher" layoutX="709.0" layoutY="437.0" mnemonicParsing="false" onAction="#buttonrechercher1" prefHeight="51.0" prefWidth="161.0" styleClass="d" stylesheets="@../css/button.css" text="rechercher" />
+      <JFXTextField fx:id="tfchercher" layoutX="709.0" layoutY="495.0" />
+      <Label fx:id="champnom" layoutX="391.0" layoutY="70.0" prefHeight="21.0" prefWidth="180.0" />
+      <Label layoutX="15.0" layoutY="351.0" text="categorie" textFill="#06043be6">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font></Label>
+      <JFXTextField fx:id="tfcategorie" layoutX="185.0" layoutY="339.0" />
+      <Label fx:id="label1" layoutX="350.0" layoutY="86.0" />
+      <Label fx:id="label5" layoutX="350.0" layoutY="354.0" />
+      <Label layoutX="391.0" layoutY="51.0" prefHeight="21.0" prefWidth="342.0" text="ajouter medicament" textFill="#021d51e3">
+         <font>
+            <Font name="Times New Roman Bold" size="34.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
